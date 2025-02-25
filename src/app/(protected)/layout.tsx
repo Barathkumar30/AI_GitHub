@@ -16,6 +16,7 @@ const SidebarLayout = ({ children }: props) => {
           <div className="ml-auto"></div>
           <UserButton />
         </div>
+        
       </main>
     </SidebarProvider>
   )
