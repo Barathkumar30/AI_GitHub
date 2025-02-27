@@ -11,7 +11,7 @@ export const projectRouter = createTRPCRouter({
       }),
     )
     .mutation(async ({ ctx, input }) => {
-      const project = ctx.db.project.create({
+      const project = await ctx.db.project.create({
         data: {
           githubUrl: input.githubURL,
           name: input.name,
@@ -22,6 +22,6 @@ export const projectRouter = createTRPCRouter({
           },
         },
       });
-      return project
+      return project;
     }),
 });
